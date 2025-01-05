@@ -6,5 +6,5 @@ class_name Plant extends Node2D
 func _ready() -> void:
 	$Hitbox.Damaged.connect(takeDmage)
 
-func takeDmage(_damage : int) -> void:
+func takeDmage(_damage : HurtBox) -> void:
 	queue_free()

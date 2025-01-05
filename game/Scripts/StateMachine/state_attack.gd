@@ -20,8 +20,9 @@ func enter() -> void:
 	
 	attacking = true
 	
-	await get_tree().create_timer(0.1).timeout
-	hurt_box.monitoring = true
+	await get_tree().create_timer(0.05).timeout
+	if attacking:
+		hurt_box.monitoring = true
 
 func exit() -> void:
 	sprite.animation_finished.disconnect(endAttack)

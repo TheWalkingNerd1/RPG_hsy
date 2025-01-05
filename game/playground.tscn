@@ -1,23 +1,149 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqb2mdm4ca40f"]
+[gd_scene load_steps=15 format=3 uid="uid://dqb2mdm4ca40f"]
 
-[ext_resource type="PackedScene" uid="uid://6hxe7813blsg" path="res://Player/player.tscn" id="1_blnmp"]
-[ext_resource type="PackedScene" uid="uid://cea8vl8xp8gk6" path="res://Map/Grass-01.tscn" id="2_k6gyf"]
-[ext_resource type="PackedScene" uid="uid://cwfu51s3ned4i" path="res://General/Plant.tscn" id="3_j8vu8"]
-[ext_resource type="PackedScene" uid="uid://bnvgl4dq8ifjw" path="res://Enemies/Slime/Slime.tscn" id="4_3k38t"]
+[ext_resource type="Script" path="res://Scripts/Levels/Level.gd" id="1_peob1"]
+[ext_resource type="PackedScene" uid="uid://cea8vl8xp8gk6" path="res://Scenes/Map/Grass-01.tscn" id="2_k6gyf"]
+[ext_resource type="PackedScene" uid="uid://cd254prgk6e7f" path="res://Scenes/Map/barrier.tscn" id="3_3dfk3"]
+[ext_resource type="PackedScene" uid="uid://cwfu51s3ned4i" path="res://Scenes/General/Plant.tscn" id="3_j8vu8"]
+[ext_resource type="Texture2D" uid="uid://bkpk210bugoxo" path="res://Asset/Hana Caraka - Topdown Tileset/Tileset/Sand/Sand5.png" id="3_or7k4"]
+[ext_resource type="PackedScene" uid="uid://d4jp5mayt4pxc" path="res://Scenes/General/PlayerSpawn.tscn" id="4_3xx8d"]
+[ext_resource type="Texture2D" uid="uid://dumooqvtl3g7v" path="res://Asset/Hana Caraka - Topdown Tileset/Props/Pavement.png" id="4_iwpj8"]
+[ext_resource type="Texture2D" uid="uid://dmtkpgu37bjs" path="res://Asset/Hana Caraka - Topdown Tileset/Props/Animated/Barrel.png" id="5_d8kqa"]
+[ext_resource type="PackedScene" uid="uid://c8plo2ih1r6ro" path="res://Scenes/Enemies/Zombie/Zombie.tscn" id="10_238rt"]
+[ext_resource type="PackedScene" uid="uid://do410jcxi8dpc" path="res://Scenes/Levels/LevelTransition.tscn" id="10_bfa30"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_reg74"]
+texture = ExtResource("3_or7k4")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_my7k6"]
+texture = ExtResource("4_iwpj8")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ujif"]
+texture = ExtResource("5_d8kqa")
+0:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+2:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1q2pp"]
+sources/0 = SubResource("TileSetAtlasSource_reg74")
+sources/2 = SubResource("TileSetAtlasSource_my7k6")
+sources/4 = SubResource("TileSetAtlasSource_6ujif")
 
 [node name="MainScene" type="Node2D"]
 y_sort_enabled = true
-
-[node name="Player" parent="." instance=ExtResource("1_blnmp")]
-position = Vector2(107, 122)
+script = ExtResource("1_peob1")
 
 [node name="Grass-01" parent="." instance=ExtResource("2_k6gyf")]
+
+[node name="barrier" parent="." instance=ExtResource("3_3dfk3")]
+
+[node name="exit" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 29, 0, 10, 0, 4, 0, 3, 0, 5, 0, 0, 0, 29, 0, 8, 0, 4, 0, 3, 0, 5, 0, 0, 0)
+tile_set = SubResource("TileSet_1q2pp")
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("4_3xx8d")]
+position = Vector2(154, 191)
 
 [node name="Plant" parent="." instance=ExtResource("3_j8vu8")]
 position = Vector2(105, 85)
 
 [node name="Plant2" parent="." instance=ExtResource("3_j8vu8")]
-position = Vector2(106, 159)
+position = Vector2(108, 153)
 
-[node name="Slime" parent="." instance=ExtResource("4_3k38t")]
-position = Vector2(217, 117)
+[node name="LevelTransition" parent="." instance=ExtResource("10_bfa30")]
+position = Vector2(480, 144)
+level = "res://Scenes/Levels/Level01.tscn"
+side = 1
+
+[node name="Zombie" parent="." instance=ExtResource("10_238rt")]
+position = Vector2(227, 94)

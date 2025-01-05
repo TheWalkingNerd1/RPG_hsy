@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Item" load_steps=7 format=3 uid="uid://ejkv408ho423"]
+
+[ext_resource type="Script" path="res://Scripts/Resource/ItemEffect.gd" id="1_aq6uc"]
+[ext_resource type="Script" path="res://Scripts/Resource/Item.gd" id="2_h3tyn"]
+[ext_resource type="Script" path="res://Scripts/Resource/ItemHeal.gd" id="2_uc3gn"]
+[ext_resource type="Texture2D" uid="uid://dc5fn41mny2fg" path="res://Asset/asset/items.png" id="4_gvh7g"]
+
+[sub_resource type="Resource" id="Resource_sxel4"]
+script = ExtResource("2_uc3gn")
+healNum = 1
+use_descrip = ""
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcxwx"]
+atlas = ExtResource("4_gvh7g")
+region = Rect2(192, 0, 32, 0)
+
+[resource]
+script = ExtResource("2_h3tyn")
+name = ""
+description = "This is a magic apple!"
+texture = SubResource("AtlasTexture_mcxwx")
+effects = Array[ExtResource("1_aq6uc")]([SubResource("Resource_sxel4")])

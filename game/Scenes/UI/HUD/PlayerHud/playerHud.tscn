@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt0lhiu0fhn2r"]
+
+[ext_resource type="Script" path="res://Scripts/UI/PlayerHud.gd" id="1_5w4oi"]
+[ext_resource type="Texture2D" uid="uid://bof37s2fmcan1" path="res://Asset/asset/gui-health.png" id="1_f83to"]
+[ext_resource type="PackedScene" uid="uid://6bfk5dyg5r4y" path="res://Scenes/UI/HUD/PlayerHud/hp_gui.tscn" id="2_eqypk"]
+
+[node name="PlayerHud" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_5w4oi")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+position = Vector2(399, 11)
+texture = ExtResource("1_f83to")
+region_enabled = true
+region_rect = Rect2(29, 0, 34, 9)
+
+[node name="HFlowContainer" type="HFlowContainer" parent="Control"]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 17.0
+offset_right = 469.0
+offset_bottom = 40.0
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 2
+alignment = 1
+
+[node name="HP" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP2" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP3" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP4" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP5" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP6" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP7" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP8" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP9" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP10" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP11" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP12" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP13" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP14" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP15" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP16" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP17" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP18" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP19" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2
+
+[node name="HP20" parent="Control/HFlowContainer" instance=ExtResource("2_eqypk")]
+layout_mode = 2

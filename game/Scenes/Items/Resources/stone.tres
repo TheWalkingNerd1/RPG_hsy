@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://dygpl21o213xs"]
+
+[ext_resource type="Script" path="res://Scripts/Resource/ItemEffect.gd" id="1_dijwq"]
+[ext_resource type="Script" path="res://Scripts/Resource/Item.gd" id="1_nv3mv"]
+[ext_resource type="Texture2D" uid="uid://dc5fn41mny2fg" path="res://Asset/asset/items.png" id="2_eruol"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yyic"]
+atlas = ExtResource("2_eruol")
+region = Rect2(65, 0, 30, 32)
+
+[resource]
+script = ExtResource("1_nv3mv")
+name = "Stone"
+description = "This is a stone"
+texture = SubResource("AtlasTexture_3yyic")
+effects = Array[ExtResource("1_dijwq")]([])

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://k0wt6kd42foc"]
+
+[ext_resource type="Script" path="res://Scripts/Resource/ItemEffect.gd" id="1_2boef"]
+[ext_resource type="Script" path="res://Scripts/Resource/Item.gd" id="1_goeb5"]
+[ext_resource type="Texture2D" uid="uid://dc5fn41mny2fg" path="res://Asset/asset/items.png" id="2_ndsbp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo17b"]
+atlas = ExtResource("2_ndsbp")
+region = Rect2(0, 0, 33, 32)
+
+[resource]
+script = ExtResource("1_goeb5")
+name = "Gem"
+description = "This is a gem!"
+texture = SubResource("AtlasTexture_jo17b")
+effects = Array[ExtResource("1_2boef")]([])

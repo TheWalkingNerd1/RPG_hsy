@@ -26,4 +26,6 @@ func physics_process(_delta : float) -> StateMac:
 func handle_input(_event : InputEvent) -> StateMac:
 	if _event.is_action_pressed("attack"):
 		return attack
+	if _event.is_action_pressed("interaction"):
+		GloablePlayerManager.Interaction.emit()
 	return null
